@@ -93,8 +93,9 @@ const SideNavigation: React.FC<SideNavigationProps> = ({ activeSection, onSectio
               flex items-center space-x-3 transition-all duration-300
               ${isExpanded ? 'opacity-100' : 'opacity-0 w-0'}
             `}>
-              <div className="w-8 h-8 bg-gradient-to-r from-rose-400 to-pink-400 rounded-full flex items-center justify-center">
-                <Sparkles size={16} className="text-white" />
+              <div className="w-12 h-12  rounded-full flex items-center justify-center">
+                {/* <Sparkles size={16} className="text-white" /> */}
+                <img src="logo.png" alt="" />
               </div>
               <span className="font-bold text-lg bg-gradient-to-r from-rose-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
                 Portfolio
