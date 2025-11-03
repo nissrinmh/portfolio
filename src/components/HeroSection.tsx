@@ -90,7 +90,7 @@
 // export default HeroSection;
 import React, { useEffect, useState } from 'react';
 import { Sparkles } from 'lucide-react';
-import myphoto from '../images/moi.jpg';
+import myphoto from '../images/moi.png';
 
 interface HeroSectionProps {
   className?: string;

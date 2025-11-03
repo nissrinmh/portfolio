@@ -119,7 +119,7 @@ const SideNavigation: React.FC<SideNavigationProps> = ({ activeSection, onSectio
         </div>
 
         {/* Navigation Items */}
-        <div className="flex-1 py-6 space-y-2 px-3">
+        <div className="flex-1 py-2 space-y-2 px-3">
           {navigation.map((item, index) => (
             <button
               key={item.id}
