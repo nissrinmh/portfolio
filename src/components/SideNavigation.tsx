@@ -85,14 +85,14 @@ const SideNavigation: React.FC<SideNavigationProps> = ({ activeSection, onSectio
         shadow-2xl shadow-rose-500/10
       `}>
         {/* Header */}
-        <div className="p-6 border-b border-rose-200/30 dark:border-rose-800/30">
+        <div className="p-1 border-b border-rose-200/30 dark:border-rose-800/30">
           <button
             onClick={() => setIsExpanded(!isExpanded)}
             className="w-full flex items-center justify-between group"
           >
             <div className={`
-              flex items-center space-x-3 transition-all duration-300
-              ${isExpanded ? 'opacity-100' : 'opacity-0 w-0'}
+              flex items-center space-x-3 transition-all duration-300 
+              ${isExpanded ? 'opacity-100' : 'opacity-0 w-0'} ${isExpanded ? 'p-5' : ''} 
             `}>
               <div className="w-14 h-14  rounded-full flex items-center justify-center">
                 {/* <Sparkles size={16} className="text-white" /> */}
@@ -105,7 +105,7 @@ const SideNavigation: React.FC<SideNavigationProps> = ({ activeSection, onSectio
             
             <div className={`
               p-2 rounded-lg transition-all duration-300 group-hover:bg-rose-100 dark:group-hover:bg-rose-900/30
-              ${!isExpanded ? 'mx-auto' : ''}
+              ${!isExpanded ? 'mx-auto' : ''} 
             `}>
               <ChevronRight 
                 size={20} 
@@ -119,13 +119,13 @@ const SideNavigation: React.FC<SideNavigationProps> = ({ activeSection, onSectio
         </div>
 
         {/* Navigation Items */}
-        <div className="flex-1 py-2 space-y-1 px-3">
+        <div className="flex-1 p-2  px-3">
           {navigation.map((item, index) => (
             <button
               key={item.id}
               onClick={() => onSectionChange(item.id)}
               className={`
-                w-full group relative overflow-hidden rounded-2xl transition-all duration-500
+                w-full group relative overflow-hidden rounded-2xl transition-all duration-500 
                 ${activeSection === item.id 
                   ? 'bg-gradient-to-r ' + item.color + ' text-white shadow-lg transform scale-105' 
                   : 'hover:bg-rose-50 dark:hover:bg-rose-900/20 text-gray-700 dark:text-gray-300'
@@ -140,8 +140,8 @@ const SideNavigation: React.FC<SideNavigationProps> = ({ activeSection, onSectio
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
               
               <div className={`
-                relative flex items-center p-4 transition-all duration-300
-                ${!isExpanded ? 'justify-center' : 'justify-start space-x-4'}
+                relative flex items-center p-3 transition-all duration-300
+                ${!isExpanded ? 'justify-center' : 'justify-start space-x-4'} ${isExpanded ? 'p-6' : ''} 
               `}>
                 <div className={`
                   flex-shrink-0 transition-all duration-300
@@ -199,7 +199,7 @@ const SideNavigation: React.FC<SideNavigationProps> = ({ activeSection, onSectio
             </span>
           </button>
 
-          {/* Color Palette Indicator */}
+          {/* Color Palette Indicator
           <div className={`
             flex items-center p-3 rounded-xl transition-all duration-300
             ${!isExpanded ? 'justify-center' : 'justify-start space-x-3'}
@@ -214,7 +214,7 @@ const SideNavigation: React.FC<SideNavigationProps> = ({ activeSection, onSectio
               <div className="w-3 h-3 rounded-full bg-purple-300"></div>
               <div className="w-3 h-3 rounded-full bg-teal-300"></div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Effet de lueur */}
