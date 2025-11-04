@@ -52,7 +52,7 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50 dark:from-gray-900 dark:via-rose-900 dark:to-purple-400 transition-all duration-1000 overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50 dark:from-gray-900 dark:via-rose-800 dark:to-purple-600 transition-all duration-1000 overflow-hidden">
         <div className="luminous-particles"></div>
         
         <div className="flex h-screen">
